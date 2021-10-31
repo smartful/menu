@@ -1,0 +1,13 @@
+.categoryBtn {
+  width: 7rem;
+  padding: 0.8rem;
+  color: #c59d5f;
+  background: whitesmoke;
+  margin: 2rem 0.5rem;
+  border-radius: 1.3rem;
+}
+
+.categoryBtn:hover {
+  color: whitesmoke;
+  background: #c59d5f;
+}
