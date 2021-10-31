@@ -1,3 +1,7 @@
+# Menu
+
+App which allow to show and filter meal of a menu.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
