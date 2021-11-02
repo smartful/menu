@@ -9,11 +9,16 @@ const App = () => {
   const [menuItems, setMenuItems] = useState(meals);
   const [categories, setCategories] = useState([]);
 
+  const filterItems = (category: string) => {
+    const newItems = meals.filter((item) => item.category === category);
+    setMenuItems(newItems);
+  };
+
   return (
     <div className="App">
       <MainTitle title="Menu" barColor="#c59d5f" />
-      <MealCategories />
-      <Container />
+      <MealCategories filterItems={filterItems} />
+      <Container items={menuItems} />
     </div>
   );
 };

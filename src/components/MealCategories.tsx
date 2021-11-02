@@ -1,7 +1,11 @@
 import React from "react";
-import CategoryButton from "./CategoryButton/default";
+import "./MealCategories.css";
 
-const MealCategories: React.FC = () => {
+export interface MealCategoriesProps {
+  filterItems: (category: string) => void;
+}
+
+const MealCategories: React.FC<MealCategoriesProps> = ({ filterItems }) => {
   const styleCategories: React.CSSProperties = {
     display: "flex",
     flexDirection: "row",
@@ -11,10 +15,12 @@ const MealCategories: React.FC = () => {
 
   return (
     <div style={styleCategories}>
-      <CategoryButton>Tout</CategoryButton>
-      <CategoryButton>Petit déjeuner</CategoryButton>
-      <CategoryButton>Plat</CategoryButton>
-      <CategoryButton>Dessert</CategoryButton>
+      <button className="categoryBtn">Tout</button>
+      <button className="categoryBtn" onClick={() => filterItems("Petit Dèj")}>
+        Petit déjeuner
+      </button>
+      <button className="categoryBtn">Plat</button>
+      <button className="categoryBtn">Dessert</button>
     </div>
   );
 };

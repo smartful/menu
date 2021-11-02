@@ -2,7 +2,11 @@ import React from "react";
 import { meals } from "../data/meals";
 import MealCard from "./MealCard";
 
-const Container: React.FC = () => {
+export interface ContainerProps {
+  items: any[];
+}
+
+const Container: React.FC<ContainerProps> = ({ items }) => {
   const styleContainer: React.CSSProperties = {
     display: "flex",
     flexDirection: "row",
@@ -14,7 +18,7 @@ const Container: React.FC = () => {
 
   return (
     <div style={styleContainer}>
-      {meals.map((meal) => (
+      {items.map((meal) => (
         <MealCard
           key={meal.id}
           mealName={meal.mealName}
