@@ -17,12 +17,10 @@ const MealCard: React.FC<MealCardProps> = ({
     display: "flex",
     flexDirection: "row",
     width: "35%",
-    border: "1px solid white",
     borderRadius: "1.2rem",
-    backgroundColor: "white",
+    backgroundColor: "rgba(245, 245, 245, 0.8)",
     paddingBottom: "1.5rem",
     marginBottom: "3rem",
-    boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.2)",
   };
 
   const styleText: React.CSSProperties = {
@@ -39,14 +37,29 @@ const MealCard: React.FC<MealCardProps> = ({
     borderRadius: "0.8rem",
   };
 
+  const styleTitle: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "90%",
+    borderBottom: "1px dashed grey",
+    paddingBottom: "0.6em",
+  };
+
+  const stylePrice: React.CSSProperties = {
+    fontWeight: "bolder",
+    color: "#c59d5f",
+  };
+
   return (
     <div style={styleCard}>
       <img src={srcImg} alt={mealName} style={styleImg} />
       <div style={styleText}>
-        <h3>
-          {mealName} - {price} €
-        </h3>
-        <p>{description}</p>
+        <div style={styleTitle}>
+          <div>{mealName}</div>
+          <div style={stylePrice}>{price} €</div>
+        </div>
+        <p style={{ color: "#888" }}>{description}</p>
       </div>
     </div>
   );
