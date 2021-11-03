@@ -2,10 +2,14 @@ import React from "react";
 import "./MealCategories.css";
 
 export interface MealCategoriesProps {
+  categories: string[];
   filterItems: (category: string) => void;
 }
 
-const MealCategories: React.FC<MealCategoriesProps> = ({ filterItems }) => {
+const MealCategories: React.FC<MealCategoriesProps> = ({
+  categories,
+  filterItems,
+}) => {
   const styleCategories: React.CSSProperties = {
     display: "flex",
     flexDirection: "row",
@@ -15,12 +19,15 @@ const MealCategories: React.FC<MealCategoriesProps> = ({ filterItems }) => {
 
   return (
     <div style={styleCategories}>
-      <button className="categoryBtn">Tout</button>
-      <button className="categoryBtn" onClick={() => filterItems("Petit Dèj")}>
-        Petit déjeuner
-      </button>
-      <button className="categoryBtn">Plat</button>
-      <button className="categoryBtn">Dessert</button>
+      {categories.map((category) => (
+        <button
+          key={category}
+          className="categoryBtn"
+          onClick={() => filterItems(category)}
+        >
+          {category}
+        </button>
+      ))}
     </div>
   );
 };

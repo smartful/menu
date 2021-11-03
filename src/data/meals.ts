@@ -9,13 +9,13 @@ export interface MealType {
 
 export const meals: Array<MealType> = [
   {
-    id: 0,
-    mealName: "Buttermilk Pancakes",
-    price: 8,
+    id: 3,
+    mealName: "Country Delight",
+    price: 11,
     description:
-      "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed",
-    category: "Dessert",
-    srcImg: "https://react-projects-5-menu.netlify.app/images/item-1.jpeg",
+      "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,",
+    category: "Petit Dèj",
+    srcImg: "https://react-projects-5-menu.netlify.app/images/item-4.jpeg",
   },
   {
     id: 1,
@@ -27,6 +27,15 @@ export const meals: Array<MealType> = [
     srcImg: "https://react-projects-5-menu.netlify.app/images/item-2.jpeg",
   },
   {
+    id: 0,
+    mealName: "Buttermilk Pancakes",
+    price: 8,
+    description:
+      "I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed",
+    category: "Dessert",
+    srcImg: "https://react-projects-5-menu.netlify.app/images/item-1.jpeg",
+  },
+  {
     id: 2,
     mealName: "Godzilla Milkshake",
     price: 9,
@@ -34,15 +43,6 @@ export const meals: Array<MealType> = [
       "ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.",
     category: "Dessert",
     srcImg: "https://react-projects-5-menu.netlify.app/images/item-3.jpeg",
-  },
-  {
-    id: 3,
-    mealName: "Country Delight",
-    price: 11,
-    description:
-      "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,",
-    category: "Petit Dèj",
-    srcImg: "https://react-projects-5-menu.netlify.app/images/item-4.jpeg",
   },
   {
     id: 4,
